@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MetierBoutique.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MetierBoutique.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCategorie">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Categorie" nillable="true" type="tns:Categorie" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategorie" nillable="true" type="tns:ArrayOfCategorie" />
+  <xs:complexType name="Categorie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeCategorie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DesignationCategorie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Categorie" nillable="true" type="tns:Categorie" />
+  <xs:complexType name="ArrayOfProduit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Produit" nillable="true" type="tns:Produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduit" nillable="true" type="tns:ArrayOfProduit" />
+  <xs:complexType name="Produit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeProduit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DesignationProduit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCategorie" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pu" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantiteQritique" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Produit" nillable="true" type="tns:Produit" />
+</xs:schema>
